@@ -18,18 +18,11 @@ airbnb-price-prediction/
 ├── data/                    # Dataset files
 │   └── Airbnb_data.csv
 ├── notebooks/               # Jupyter notebooks
-│   ├── 1_EDA.ipynb          # Exploratory Data Analysis
-│   ├── 2_Preprocessing.ipynb # Data Cleaning
-│   └── 3_Modeling.ipynb     # Model Development
+│   ├── 1_airbnb_price_prediction-using-ML
 ├── models/                  # Saved models
-│   └── airbnb_price_predictor_xgboost.pkl
-├── src/                     # Source code
-│   ├── preprocessing.py     # Data processing functions
-│   └── predict.py           # Prediction functions
-├── reports/                 # Project documentation
-│   └── Airbnb_Price_Prediction.pdf
-├── README.md                # This file
-└── requirements.txt         # Python dependencies
+├── gradio-app/              # Project documentation
+│   └── app.py
+└── README.md
 ```
 
 ## Dataset Information
@@ -71,48 +64,13 @@ The dataset contains 74,111 listings with 29 features including:
   - Highlight key amenities (WiFi, kitchen)
   - Optimize location tags in listings
 
-## Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/airbnb-price-prediction.git
-cd airbnb-price-prediction
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-To make a price prediction:
-
-```python
-from src.predict import predict_price
-
-test_listing = {
-    'property_type': 'Apartment',
-    'room_type': 'Entire home/apt',
-    'bedrooms': 2,
-    'bathrooms': 1.5,
-    'city': 'NYC',
-    # ... other features
-}
-
-predicted_price = predict_price(test_listing)
-print(f"Predicted price: ${predicted_price:.2f}")
-```
 
 ## Future Work
 
 - Incorporate image analysis and NLP for listing descriptions
 - Geospatial analysis for proximity to attractions
 - Web app deployment for real-time predictions
-
-## Contributors
-
-- [Your Name](https://github.com/yourusername)
 
 ## License
 
